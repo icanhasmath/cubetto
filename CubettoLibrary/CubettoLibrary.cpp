@@ -340,7 +340,7 @@ void Cubetto::decodeInterfaceInstructions (uint8_t command)
 					moveLeft(); 
 					break; 
 				case CUBETTO_RANDOM:
-					moveRandom(); 
+					playHappyFarmer(); 
 					break; 		
 			}
 			replyToMovementMessage(true); 	
@@ -771,6 +771,36 @@ void Cubetto::playTestTone()
   noTone(IO_SOUNDER);
 }
 
+/*********************************************************************************************************************************************************
+ * @method   	void Cubetto::playHappyFarmer()
+ * @brief  		Plays The Happy Farmer
+ * @param			None
+ * @return		None
+/*********************************************************************************************************************************************************/
+void Cubetto::playHappyFarmer()
+{
+  tone(IO_SOUNDER, NOTE_D3);
+  delay(100);
+  tone(IO_SOUNDER, NOTE_G3);
+  delay(300);
+  tone(IO_SOUNDER, NOTE_B3);
+  delay(100);
+  tone(IO_SOUNDER, NOTE_D4);
+  delay(300);
+  tone(IO_SOUNDER, NOTE_G3);
+  delay(100);
+  tone(IO_SOUNDER, NOTE_C4);
+  delay(100);
+  tone(IO_SOUNDER, NOTE_E4);
+  delay(100);
+  tone(IO_SOUNDER, NOTE_G4);
+  delay(100);
+  tone(IO_SOUNDER, NOTE_E4);
+  delay(100);
+  tone(IO_SOUNDER, NOTE_D4);
+  delay(300);
+  noTone(IO_SOUNDER);
+}
 
 /*********************************************************************************************************************************************************
  * @method   	void Cubetto::bluetoothTasks()
